@@ -60,6 +60,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HomeScreen',
           path: '/homeScreen',
           builder: (context, params) => const HomeScreenWidget(),
+        ),
+        FFRoute(
+          name: 'BookmarkScreen',
+          path: '/bookmarkScreen',
+          builder: (context, params) => const BookmarkScreenWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
